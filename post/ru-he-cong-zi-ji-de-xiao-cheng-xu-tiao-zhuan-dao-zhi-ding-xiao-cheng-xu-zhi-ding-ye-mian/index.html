@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如何从自己的小程序跳转到指定小程序指定页面 | Gridea</title>
+<link rel="shortcut icon" href="https://208917.xyz//favicon.ico?v=1619855614796">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://208917.xyz//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="如何从自己的小程序跳转到指定小程序指定页面 | Gridea - Atom Feed" href="https://208917.xyz//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="小程序系统广告门槛高，流量主费用低，个人开发者难以变现。电商CPS也是一种不错的变现方式，在自己的小程序内添加购物优惠导航入口。自己小程序的用户通过导航跳转到电商平台，进行购物，购物完成结算后，作为开发者可以得到一笔相对可观的推广费。
+简单..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://208917.xyz/">
+  <img class="avatar" src="https://208917.xyz//images/avatar.png?v=1619855614796" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              如何从自己的小程序跳转到指定小程序指定页面
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-05-01
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>小程序系统广告门槛高，流量主费用低，个人开发者难以变现。电商CPS也是一种不错的变现方式，在自己的小程序内添加购物优惠导航入口。自己小程序的用户通过导航跳转到电商平台，进行购物，购物完成结算后，作为开发者可以得到一笔相对可观的推广费。</p>
+<p>简单记录一下如何从自己的小程序跳转到指定小程序指定页面</p>
+<h5 id="优惠数据来源">优惠数据来源</h5>
+<p>百度是个好东西，想对接哪个平台，直接搜索<code>平台名称+联盟</code>,找到官方联盟广告网站，看是否有对外开放的api使用。有api的话是否需要申请调用权限等。照着步骤来，开通后直接从后端api拉取优惠信息。</p>
+<h5 id="跳转实现">跳转实现</h5>
+<p>先看下微信官方文档上的跳转到第三方小程序的demo。需要知道小程序的<code>ID</code>和 <code>跳转页面路径</code>两个参数。下面以 瑞幸coffee拉新活动为例</p>
+<pre><code class="language-auto">wx.navigateToMiniProgram({
+  appId: '',
+  path: 'page/index/index?id=123'
+})
+</code></pre>
+<h3 id="方法一常规办法也是最有效的办法">方法一：常规办法，也是最有效的办法</h3>
+<h3 id="获取小程序-id">获取小程序 ID</h3>
+<p>第一步 打开瑞幸小程序活动页面，点击分享后下面的上拉框，点击下拉框上显示的 luckincoffee瑞幸咖啡标题进入<br>
+<img src="http://pic.iask.cn/fimg/791203505819.jpg" alt="" loading="lazy"><br>
+第二步 点击该页面的更多资料<br>
+<img src="http://pic.iask.cn/fimg/348233505828.jpg" alt="" loading="lazy"><br>
+第三步 可以看到瑞幸coffee小程序的 APPID是<code>wx21c7506e98a2fe75</code><br>
+<img src="http://pic.iask.cn/fimg/198183505837.jpg" alt="" loading="lazy"></p>
+<h3 id="获取小程序推广页面路径">获取小程序推广页面路径</h3>
+<p>第一步 登录到自己小程序的管理后台，使用工具=&gt;生成小程序码<br>
+<img src="http://pic.iask.cn/fimg/692473505935.jpg" alt="" loading="lazy"><br>
+第二步 输入刚才的瑞幸小程序的APPID 搜索<br>
+<img src="http://pic.iask.cn/fimg/630183505881.jpg" alt="" loading="lazy"><br>
+第三步 小程序页面路径输入框下面，点击获取更多页面路径<br>
+<img src="http://pic.iask.cn/fimg/262973505941.jpg" alt="" loading="lazy"><br>
+第四步 输入微信号后开启<br>
+<img src="http://pic.iask.cn/fimg/597953505943.jpg" alt="" loading="lazy"><br>
+第五步，手机再次访问瑞幸小程序活动页面，分享下拉框那里就会出现一个复制操作入口，点击复制即可复制path到自己的黏贴版<br>
+<img src="http://pic.iask.cn/fimg/857803505951.jpg" alt="" loading="lazy"></p>
+<p>获取到的path为<code>pages/share/inviterReg/inviterReg.html?locationType=1&amp;inviteCode=oZwgBf3wUaxVq259SiAnug&amp;channelInviteCode=undefined&amp;target=qnUYjFYUG5PBTnoKWZLcDQ&amp;activityNo=NR201810220001</code></p>
+<p>然后不要忘记真正代码里的path<code>要去掉.html</code><br>
+真正可以跳转的path为<code>pages/share/inviterReg/inviterReg?locationType=1&amp;inviteCode=oZwgBf3wUaxVq259SiAnug&amp;channelInviteCode=undefined&amp;target=qnUYjFYUG5PBTnoKWZLcDQ&amp;activityNo=NR201810220001</code></p>
+<h3 id="方法二利用转码机器人自动获取路径">方法二：利用转码机器人自动获取路径</h3>
+<p>添加机器人好友，分享小程序给他，自动回复路径和对应的图片码</p>
+<figure data-type="image" tabindex="1"><img src="https://gitee.com/he11oworld/picBed/raw/master/WechatIMG482.jpeg" alt="" loading="lazy"></figure>
+<h3 id="关注不迷路有疑问也可以通过公众号找到我">关注不迷路，有疑问也可以通过公众号找到我</h3>
+<figure data-type="image" tabindex="2"><img src="https://gitee.com/he11oworld/picBed/raw/master/WechatIMG653.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90">优惠数据来源</a></li>
+<li><a href="#%E8%B7%B3%E8%BD%AC%E5%AE%9E%E7%8E%B0">跳转实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E5%B8%B8%E8%A7%84%E5%8A%9E%E6%B3%95%E4%B9%9F%E6%98%AF%E6%9C%80%E6%9C%89%E6%95%88%E7%9A%84%E5%8A%9E%E6%B3%95">方法一：常规办法，也是最有效的办法</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%B0%8F%E7%A8%8B%E5%BA%8F-id">获取小程序 ID</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A8%E5%B9%BF%E9%A1%B5%E9%9D%A2%E8%B7%AF%E5%BE%84">获取小程序推广页面路径</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E5%88%A9%E7%94%A8%E8%BD%AC%E7%A0%81%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84">方法二：利用转码机器人自动获取路径</a></li>
+<li><a href="#%E5%85%B3%E6%B3%A8%E4%B8%8D%E8%BF%B7%E8%B7%AF%E6%9C%89%E7%96%91%E9%97%AE%E4%B9%9F%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E5%85%AC%E4%BC%97%E5%8F%B7%E6%89%BE%E5%88%B0%E6%88%91">关注不迷路，有疑问也可以通过公众号找到我</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://208917.xyz/post/da-jian-wai-mai-fan-li-cps-xiao-cheng-xu/">
+              <h3 class="post-title">
+                搭建外卖返利cps小程序
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://208917.xyz//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
