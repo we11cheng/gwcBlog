@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>搭建外卖返利cps小程序 | Gridea</title>
+<link rel="shortcut icon" href="https://208917.xyz//favicon.ico?v=1619859421239">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://208917.xyz//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="搭建外卖返利cps小程序 | Gridea - Atom Feed" href="https://208917.xyz//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="第一步、申请饿了么官方返利api
+
+淘宝联盟登陆账号https://pub.alimama.com/
+点击推广管理--&gt;媒体备案管理--&gt;他方平台--&gt;新增媒体备案
+
+
+业务负责人根据自己信息填写
+
+个人账号会直接审核通过..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://208917.xyz/">
+  <img class="avatar" src="https://208917.xyz//images/avatar.png?v=1619859421239" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              搭建外卖返利cps小程序
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-05-01
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="第一步-申请饿了么官方返利api">第一步、申请饿了么官方返利api</h3>
+<ul>
+<li>淘宝联盟登陆账号<a href="https://pub.alimama.com/">https://pub.alimama.com/</a></li>
+<li>点击推广管理--&gt;媒体备案管理--&gt;他方平台--&gt;新增媒体备案<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/640.png" alt="" loading="lazy"><br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152224.png" alt="" loading="lazy"><br>
+业务负责人根据自己信息填写<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152322.png" alt="" loading="lazy"><br>
+个人账号会直接审核通过<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152513.png" alt="" loading="lazy"><br>
+点击申请APPKey   -- &gt; 立即申请<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152556.png" alt="" loading="lazy"><br>
+点击创建<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152643.png" alt="" loading="lazy"><br>
+创建应用<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152725.png" alt="" loading="lazy"><br>
+选择刚才创建的推广位提交<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152755.png" alt="" loading="lazy"><br>
+查看appkey<br>
+下方所有权限都需要申请<br>
+只要随便写100字以上就会通过申请<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152845.png" alt="" loading="lazy"><br>
+选择刚申请的应用 点击推广位进行创建<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125152917.png" alt="" loading="lazy"><br>
+保留此pid<br>
+前往此链接<a href="https://open.taobao.com/doc.htm?spm=a219a.7386653.0.0.2535669aU8utEf&amp;docId=1&amp;docType=15&amp;apiName=taobao.appstore.subscribe.get">https://open.taobao.com/doc.htm?spm=a219a.7386653.0.0.2535669aU8utEf&amp;docId=1&amp;docType=15&amp;apiName=taobao.appstore.subscribe.get</a>获取饿了么返利api<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125153042.png" alt="" loading="lazy"></li>
+</ul>
+<p>activity_material_id有两个选择</p>
+<p>直接领取红包：1571715733668</p>
+<p>每日生鲜红包：1585018034441</p>
+<p>全部填写之后，提交测试，如下图<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125153204.png" alt="" loading="lazy"><br>
+因为淘宝联盟有一些延迟需要等候一段时间才能获取推广链接(报错的话耐心等就行了)<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125153326.png" alt="" loading="lazy"><br>
+复制此链接删除&quot;/&quot;符号，https://s.click.ele.me/VQSPLuu<br>
+保存此链接。</p>
+<h3 id="第二步-申请小程序并搭建">第二步、申请小程序并搭建</h3>
+<ul>
+<li>感谢大佬的开源<a href="https://github.com/zwpro/coupons">https://github.com/zwpro/coupons</a></li>
+<li>下载解压HBuilderX<a href="https://www.dcloud.io/hbuilderx.html">https://www.dcloud.io/hbuilderx.html</a></li>
+<li>下载安装微信开发者工具<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></li>
+<li>打开HBuilderX  --&gt;文件--&gt;打开目录 刚才解压的代码</li>
+<li>编辑/pages/index/index.vue<br>
+<img src="https://gitee.com/he11oworld/picBed/raw/master/20201125153808.png" alt="" loading="lazy"><br>
+改为刚才保存的自己的饿了么返利api</li>
+</ul>
+<p>不需要的比如爱奇艺之类的 注释掉就好了</p>
+<p>然后打包程序，</p>
+<p>用微信开发者工具上传小程序并提交审核即可。</p>
+<p>体验地址</p>
+<figure data-type="image" tabindex="1"><img src="https://gitee.com/he11oworld/picBed/raw/master/20210501153837.png" alt="" loading="lazy"></figure>
+<p>关注不迷路，有疑问也可以通过公众号找到我</p>
+<figure data-type="image" tabindex="2"><img src="https://gitee.com/he11oworld/picBed/raw/master/%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-%E7%94%B3%E8%AF%B7%E9%A5%BF%E4%BA%86%E4%B9%88%E5%AE%98%E6%96%B9%E8%BF%94%E5%88%A9api">第一步、申请饿了么官方返利api</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E7%94%B3%E8%AF%B7%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B9%B6%E6%90%AD%E5%BB%BA">第二步、申请小程序并搭建</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://208917.xyz/post/about/">
+              <h3 class="post-title">
+                关于
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://208917.xyz//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
